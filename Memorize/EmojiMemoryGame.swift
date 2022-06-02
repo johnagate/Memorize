@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/* likely need to add an init to this object and take in a theme for the init */
+
 class EmojiMemoryGame: ObservableObject {
     
     static let emojis = ["✈️", "🚀", "🚗", "🚘", "🚙", "🏎", "🛵", "🏍", "🚌", "🚐", "🚛", "🛳", "🚑", "🛩", "🚍", "🚜", "🛴", "🚊", "🚲", "🚕", "🚚", "⛴", "🚞", "🚢"]

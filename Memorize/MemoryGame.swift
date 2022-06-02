@@ -50,17 +50,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
         var content: CardContent
         var id: Int
     }
-    
-    struct Theme {
-        /* Add the formal concept of a “Theme” to your Model. A Theme consists of a name
-        for the theme, a set of emoji to use, a number of pairs of cards to show, and an
-        appropriate color to use to draw the cards. */
-        var name: String?
-        var emojis: Array<String> = []
-        var pairsOfCards: Int?
-        var color: String?
-        
-    }
 }
 
 
