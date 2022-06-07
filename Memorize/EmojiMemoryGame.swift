@@ -23,7 +23,7 @@ class EmojiMemoryGame: ObservableObject {
                                color: "tan"),
                          Theme(name: "Space",
                                emojis: ["🔭", "🪐", "☄️", "🛸", "👽", "🛰", "🚀", "👩‍🚀", "👾"],
-                               pairsOfCards: 4,
+                               pairsOfCards: 10,
                                color: "black"),
                          Theme(name: "Water",
                                emojis: ["💦", "🔫", "🌊", "💧", "🐟", "🏝", "🐙", "🦈", "🚰", "⛲️", "", "🏄‍♂️", "🤿"],
@@ -42,7 +42,7 @@ class EmojiMemoryGame: ObservableObject {
         }
     }
     
-    @Published private var model: MemoryGame<String> = createMemoryGame(theme: themes[1])
+    @Published private var model: MemoryGame<String> = createMemoryGame(theme: themes[3])
     
     var cards: Array<MemoryGame<String>.Card> {
         model.cards
