@@ -14,7 +14,11 @@ class EmojiMemoryGame: ObservableObject {
         model = EmojiMemoryGame.createMemoryGame(theme: theme)
     }
     
-    var theme: Theme
+    private var theme: Theme
+    
+    var themeName: String {
+        return theme.name
+    }
     
     static var themes = [Theme(name: "Vehicles",
                              emojis: ["✈️", "🚀", "🚗", "🚘", "🚙", "🏎", "🛵", "🏍", "🚌", "🚐", "🚛", "🛳", "🚑", "🛩", "🚍", "🚜", "🛴", "🚊", "🚲", "🚕", "🚚", "⛴", "🚞", "🚢"],

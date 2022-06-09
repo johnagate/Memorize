@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("\(viewModel.theme.name)")
+            Text("\(viewModel.themeName)")
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
                     ForEach(viewModel.cards) { card in
