@@ -20,14 +20,33 @@ class EmojiMemoryGame: ObservableObject {
         return theme.name
     }
     
+    var themeColor: Color {
+            switch theme.color {
+            case "red":
+                return .red
+            case "orange":
+                return .orange
+            case "black":
+                return .black
+            case "blue":
+                return .blue
+            case "gray":
+                return .gray
+            case "tan":
+                return .brown
+            default:
+                return .black
+            }
+    }
+    
     static var themes = [Theme(name: "Vehicles",
                              emojis: ["✈️", "🚀", "🚗", "🚘", "🚙", "🏎", "🛵", "🏍", "🚌", "🚐", "🚛", "🛳", "🚑", "🛩", "🚍", "🚜", "🛴", "🚊", "🚲", "🚕", "🚚", "⛴", "🚞", "🚢"],
                              pairsOfCards: 7,
                              color: "red"),
                          Theme(name: "Halloween",
                                emojis: ["💀", "👻", "🎃", "🧌", "🧙‍♀️", "🧟‍♀️", "🕸", "🕷", "🍭", "🍬"],
-                               pairsOfCards: 6,
-                               color: "organge"),
+                               pairsOfCards: 40,
+                               color: "orange"),
                          Theme(name: "Food",
                                emojis: ["🍔", "🌭", "🌮", "🌯", "🥗", "🥪", "🍕", "🍟", "🍖", "🍗", "🍜", "🧇", "🥞", "🍭", "🥜"],
                                pairsOfCards: 5,
@@ -63,6 +82,10 @@ class EmojiMemoryGame: ObservableObject {
     
     var cards: Array<MemoryGame<String>.Card> {
         model.cards
+    }
+    
+    var score: Int {
+        model.score
     }
     
     // Mark: - Intent(s)
